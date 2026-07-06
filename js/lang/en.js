@@ -1,0 +1,150 @@
+export default {
+  // General
+  app_title: "Pixel Editor",
+  project_name_untitled: "untitled",
+
+  // Top bar
+  menu_title: "Menu",
+  menu_aria_label: "Open menu",
+  undo_title: "Undo (Ctrl+Z)",
+  redo_title: "Redo (Ctrl+Y)",
+  layers_title: "Layers",
+  color_title: "Color",
+  file_title: "File",
+
+  // Toolbar
+  toolbar_aria_label: "Drawing tools",
+  tool_pencil: "Pencil",
+  tool_pencil_title: "Pencil (B)",
+  tool_eraser_title: "Eraser (E)",
+  tool_bucket_title: "Fill bucket (G)",
+  tool_line_title: "Line (L)",
+  tool_rect_title: "Rectangle (R)",
+  tool_circle_title: "Circle (C)",
+  tool_eyedropper_title: "Eyedropper (I)",
+  tool_pan_title: "Pan / Move (H)",
+  zoom_out_title: "Zoom out (-)",
+  zoom_in_title: "Zoom in (+)",
+  grid_title: "Toggle grid (Ctrl+G)",
+  clear_title: "Clear canvas",
+
+  // Status bar tool labels
+  status_tool_pencil: "Pencil",
+  status_tool_eraser: "Eraser",
+  status_tool_bucket: "Fill bucket",
+  status_tool_line: "Line",
+  status_tool_rect: "Rectangle",
+  status_tool_circle: "Circle",
+  status_tool_eyedropper: "Eyedropper",
+  status_tool_pan: "Pan",
+
+  // Color panel
+  panel_color_heading: "Color",
+  swatch_primary_title: "Primary color",
+  swatch_secondary_title: "Secondary color",
+  swatch_swap_title: "Swap colors",
+  field_hex: "Hex",
+  hex_placeholder: "#000000",
+  color_picker_sv_aria: "Saturation and value picker",
+  color_picker_hue_aria: "Hue slider",
+  field_alpha: "Alpha",
+  swatches_default_heading: "Swatches",
+  swatches_custom_heading: "Custom",
+  btn_add_custom: "+ Add current",
+  swatches_recent_heading: "Recent",
+  swatches_favorites_heading: "Favorites",
+  btn_export_palette: "Export palette",
+  btn_import_palette: "Import palette",
+  swatch_hint_remove: " (double-tap to remove, hold to favorite)",
+  swatch_hint_favorite: " (hold to favorite)",
+
+  // Layers panel
+  panel_layers_heading: "Layers",
+  btn_layer_add: "+ Layer",
+  btn_layer_dup: "Duplicate",
+  btn_layer_merge: "Merge down",
+  btn_layer_delete: "Delete",
+  layers_hint: "Animation frames (add/remove frame, onion skin, play/FPS, GIF export) are planned for v2 — see README backlog. Each layer above can stand in as a manual pose today.",
+  layer_default_name: "Layer",
+  layer_opacity_title: "Opacity",
+  layer_toggle_visibility_title: "Toggle visibility",
+  layer_toggle_lock_title: "Toggle lock",
+  layer_move_up_title: "Move up",
+  layer_move_down_title: "Move down",
+
+  // File panel / menu
+  panel_file_heading: "File",
+  file_language_heading: "Language",
+  file_project_heading: "Project",
+  btn_new_canvas: "New canvas…",
+  btn_open_canvas: "Open…",
+  btn_save_as: "Save as…",
+  autosave_hint: "Autosaved locally.",
+
+  file_export_heading: "Export",
+  field_filename: "File name",
+  field_scale: "Scale",
+  field_transparent: "Transparent background",
+  btn_export_png: "Export PNG",
+  btn_export_sheet: "Sprite sheet (layers)",
+  btn_export_meta: "Export JSON metadata",
+  btn_export_project: "Export project file",
+  btn_import_project: "Import project file",
+
+  file_appearance_heading: "Appearance",
+  field_dark_mode: "Dark mode",
+
+  // Tool options (brush / filled)
+  field_brush: "Brush",
+  field_filled: "Filled",
+
+  // Dialog: new canvas
+  dialog_new_heading: "New canvas",
+  field_preset_size: "Preset size",
+  preset_custom: "Custom…",
+  field_width: "Width",
+  field_height: "Height",
+  new_canvas_hint: "Starting a new canvas replaces the current one. Save first if you want to keep it.",
+  btn_cancel: "Cancel",
+  btn_create: "Create",
+
+  // Dialog: clear canvas
+  dialog_clear_heading: "Clear canvas?",
+  clear_canvas_hint: "This clears the active layer only. You can undo it right after.",
+  btn_clear_confirm: "Clear",
+
+  // Dialog: save as
+  dialog_save_as_heading: "Save as",
+  field_project_name: "Project name",
+  save_as_placeholder: "my-sprite",
+  btn_save: "Save",
+
+  // Dialog: open project
+  dialog_open_heading: "Open project",
+  open_empty_hint: "No saved projects yet.",
+  btn_close: "Close",
+  project_open_button: "Open",
+  project_delete_button: "Delete",
+
+  // Toasts
+  toast_palette_exported: "Palette exported",
+  toast_palette_imported: "Palette imported",
+  toast_palette_import_error: "Could not read palette file",
+  toast_color_picked: "Color picked",
+  toast_layer_added: "Layer added",
+  toast_layer_merged: "Merged down",
+  toast_layer_merge_error: "Nothing below to merge into",
+  toast_layer_delete_error: "Cannot delete the only layer",
+  toast_png_exported: "PNG exported",
+  toast_export_error: "Export failed",
+  toast_sprite_sheet_exported: "Sprite sheet exported",
+  toast_metadata_exported: "Metadata exported",
+  toast_project_exported: "Project file exported",
+  toast_project_imported: "Project imported",
+  toast_project_import_error: "Could not read project file",
+  toast_project_opened: 'Opened "{name}"',
+  toast_project_name_required: "Enter a project name",
+  toast_project_saved: 'Saved as "{name}"',
+  toast_canvas_created: "New {size} canvas",
+  toast_canvas_cleared: "Canvas cleared",
+};

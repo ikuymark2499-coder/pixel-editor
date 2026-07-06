@@ -1,0 +1,150 @@
+export default {
+  // ทั่วไป
+  app_title: "Pixel Editor",
+  project_name_untitled: "ไม่มีชื่อ",
+
+  // แถบบน
+  menu_title: "เมนู",
+  menu_aria_label: "เปิดเมนู",
+  undo_title: "ย้อนกลับ (Ctrl+Z)",
+  redo_title: "ทำซ้ำ (Ctrl+Y)",
+  layers_title: "เลเยอร์",
+  color_title: "สี",
+  file_title: "ไฟล์",
+
+  // แถบเครื่องมือวาดภาพ
+  toolbar_aria_label: "เครื่องมือวาดภาพ",
+  tool_pencil: "ดินสอ",
+  tool_pencil_title: "ดินสอ (B)",
+  tool_eraser_title: "ยางลบ (E)",
+  tool_bucket_title: "ถังเติมสี (G)",
+  tool_line_title: "เส้นตรง (L)",
+  tool_rect_title: "สี่เหลี่ยม (R)",
+  tool_circle_title: "วงกลม (C)",
+  tool_eyedropper_title: "หลอดดูดสี (I)",
+  tool_pan_title: "เลื่อนมุมมอง (H)",
+  zoom_out_title: "ซูมออก (-)",
+  zoom_in_title: "ซูมเข้า (+)",
+  grid_title: "แสดง/ซ่อนตาราง (Ctrl+G)",
+  clear_title: "ล้างภาพ",
+
+  // ป้ายชื่อเครื่องมือที่แสดงในแถบสถานะด้านล่าง
+  status_tool_pencil: "ดินสอ",
+  status_tool_eraser: "ยางลบ",
+  status_tool_bucket: "ถังเติมสี",
+  status_tool_line: "เส้นตรง",
+  status_tool_rect: "สี่เหลี่ยม",
+  status_tool_circle: "วงกลม",
+  status_tool_eyedropper: "หลอดดูดสี",
+  status_tool_pan: "เลื่อนมุมมอง",
+
+  // แผงสี
+  panel_color_heading: "สี",
+  swatch_primary_title: "สีหลัก",
+  swatch_secondary_title: "สีรอง",
+  swatch_swap_title: "สลับสีหลัก-รอง",
+  field_hex: "รหัสสี (Hex)",
+  hex_placeholder: "#000000",
+  color_picker_sv_aria: "ตัวเลือกความอิ่มสีและความสว่าง",
+  color_picker_hue_aria: "แถบเลื่อนสีฐาน (Hue)",
+  field_alpha: "ความโปร่งใส",
+  swatches_default_heading: "สีพื้นฐาน",
+  swatches_custom_heading: "สีที่กำหนดเอง",
+  btn_add_custom: "+ เพิ่มสีที่ใช้อยู่",
+  swatches_recent_heading: "ใช้ล่าสุด",
+  swatches_favorites_heading: "รายการโปรด",
+  btn_export_palette: "ส่งออกชุดสี",
+  btn_import_palette: "นำเข้าชุดสี",
+  swatch_hint_remove: " (แตะสองครั้งเพื่อลบ กดค้างเพื่อบันทึกเป็นรายการโปรด)",
+  swatch_hint_favorite: " (กดค้างเพื่อบันทึกเป็นรายการโปรด)",
+
+  // แผงเลเยอร์
+  panel_layers_heading: "เลเยอร์",
+  btn_layer_add: "+ เลเยอร์ใหม่",
+  btn_layer_dup: "คัดลอก",
+  btn_layer_merge: "รวมกับเลเยอร์ล่าง",
+  btn_layer_delete: "ลบ",
+  layers_hint: "ระบบเฟรมแอนิเมชัน (เพิ่ม/ลบเฟรม, ดูภาพเฟรมจาง ๆ, เล่น/ตั้งค่า FPS, ส่งออก GIF) กำลังจะมาในเวอร์ชันถัดไป ดูรายละเอียดได้ที่ README ระหว่างนี้ใช้เลเยอร์ด้านบนแทนท่าทางต่าง ๆ ไปก่อนได้",
+  layer_default_name: "เลเยอร์",
+  layer_opacity_title: "ความทึบของเลเยอร์",
+  layer_toggle_visibility_title: "ซ่อน/แสดงเลเยอร์",
+  layer_toggle_lock_title: "ล็อก/ปลดล็อกเลเยอร์",
+  layer_move_up_title: "ย้ายเลเยอร์ขึ้น",
+  layer_move_down_title: "ย้ายเลเยอร์ลง",
+
+  // แผงไฟล์ / เมนู
+  panel_file_heading: "ไฟล์",
+  file_language_heading: "ภาษา",
+  file_project_heading: "โปรเจกต์",
+  btn_new_canvas: "สร้างรูปใหม่…",
+  btn_open_canvas: "เปิดโปรเจกต์…",
+  btn_save_as: "บันทึกเป็น…",
+  autosave_hint: "ระบบบันทึกงานอัตโนมัติไว้ในเครื่องแล้ว",
+
+  file_export_heading: "ส่งออกไฟล์",
+  field_filename: "ชื่อไฟล์",
+  field_scale: "ขนาดขยาย",
+  field_transparent: "พื้นหลังโปร่งใส",
+  btn_export_png: "ส่งออกเป็น PNG",
+  btn_export_sheet: "สไปรต์ชีต (รวมทุกเลเยอร์)",
+  btn_export_meta: "ส่งออกข้อมูล JSON",
+  btn_export_project: "ส่งออกไฟล์โปรเจกต์",
+  btn_import_project: "นำเข้าไฟล์โปรเจกต์",
+
+  file_appearance_heading: "การแสดงผล",
+  field_dark_mode: "โหมดมืด",
+
+  // ตัวเลือกเครื่องมือ (แปรง/ระบายเต็ม)
+  field_brush: "ขนาดหัวแปรง",
+  field_filled: "ระบายเต็มรูป",
+
+  // กล่องโต้ตอบ: สร้างผ้าใบใหม่
+  dialog_new_heading: "สร้างรูปใหม่",
+  field_preset_size: "ขนาดมาตรฐาน",
+  preset_custom: "กำหนดเอง…",
+  field_width: "กว้าง",
+  field_height: "สูง",
+  new_canvas_hint: "การสร้างรูปใหม่จะแทนที่ภาพปัจจุบันทั้งหมด ถ้าอยากเก็บงานเดิมไว้ให้บันทึกก่อน",
+  btn_cancel: "ยกเลิก",
+  btn_create: "สร้าง",
+
+  // กล่องโต้ตอบ: ล้างภาพ
+  dialog_clear_heading: "ล้างภาพทั้งหมด?",
+  clear_canvas_hint: "จะล้างเฉพาะเลเยอร์ที่กำลังใช้งานอยู่เท่านั้น กดย้อนกลับได้ทันทีถ้าเปลี่ยนใจ",
+  btn_clear_confirm: "ล้างภาพ",
+
+  // กล่องโต้ตอบ: บันทึกเป็น
+  dialog_save_as_heading: "บันทึกเป็น",
+  field_project_name: "ชื่อโปรเจกต์",
+  save_as_placeholder: "my-sprite",
+  btn_save: "บันทึก",
+
+  // กล่องโต้ตอบ: เปิดโปรเจกต์
+  dialog_open_heading: "เปิดโปรเจกต์",
+  open_empty_hint: "ยังไม่มีโปรเจกต์ที่บันทึกไว้",
+  btn_close: "ปิด",
+  project_open_button: "เปิด",
+  project_delete_button: "ลบ",
+
+  // ข้อความแจ้งเตือน (toast)
+  toast_palette_exported: "ส่งออกชุดสีแล้ว",
+  toast_palette_imported: "นำเข้าชุดสีแล้ว",
+  toast_palette_import_error: "อ่านไฟล์ชุดสีไม่ได้",
+  toast_color_picked: "เลือกสีแล้ว",
+  toast_layer_added: "เพิ่มเลเยอร์ใหม่แล้ว",
+  toast_layer_merged: "รวมเลเยอร์แล้ว",
+  toast_layer_merge_error: "ไม่มีเลเยอร์ด้านล่างให้รวมด้วย",
+  toast_layer_delete_error: "ลบไม่ได้ เพราะเหลือเลเยอร์เดียว",
+  toast_png_exported: "ส่งออก PNG แล้ว",
+  toast_export_error: "ส่งออกไม่สำเร็จ",
+  toast_sprite_sheet_exported: "ส่งออกสไปรต์ชีตแล้ว",
+  toast_metadata_exported: "ส่งออกข้อมูล JSON แล้ว",
+  toast_project_exported: "ส่งออกไฟล์โปรเจกต์แล้ว",
+  toast_project_imported: "นำเข้าโปรเจกต์แล้ว",
+  toast_project_import_error: "อ่านไฟล์โปรเจกต์ไม่ได้",
+  toast_project_opened: 'เปิด "{name}" แล้ว',
+  toast_project_name_required: "กรุณาตั้งชื่อโปรเจกต์ก่อน",
+  toast_project_saved: 'บันทึกเป็น "{name}" แล้ว',
+  toast_canvas_created: "สร้างรูปขนาด {size} แล้ว",
+  toast_canvas_cleared: "ล้างภาพแล้ว",
+};
