@@ -1,0 +1,189 @@
+/* =========================================================
+   PixStar — Loading Screen (overlay shown on top of the real app while it loads)
+   Design: minimal, dark tone, premium, mobile first
+   Color variables are kept separate under :root for easy theming later
+   Doesn't depend on style.css's variables, to avoid name collisions
+   ========================================================= */
+
+:root {
+  --load-bg-0: #14121a;
+  --load-text-0: #f2eefb;
+  --load-text-1: #8d879e;
+  --load-text-2: #625d75;
+
+  --load-accent: #fe6b14;
+  --load-accent-soft: #ff8a3d;
+  --load-accent-glow: rgba(254, 107, 20, 0.55);
+
+  --load-block-idle: #2a2733;
+  --load-fade-duration: 550ms;
+}
+
+/* ---------------------------------------------------------
+   Loading Screen — container (sits above #app with the highest z-index)
+   --------------------------------------------------------- */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--load-bg-0);
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity var(--load-fade-duration) ease;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   Logo
+   --------------------------------------------------------- */
+.loading-logo-wrap {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 22px var(--load-accent-glow));
+  animation: loading-logo-breathe 2.6s ease-in-out infinite;
+}
+
+.loading-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border-radius: 22%;
+}
+
+@keyframes loading-logo-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.96; }
+  50%      { transform: scale(1.045); opacity: 1; }
+}
+
+/* ---------------------------------------------------------
+   App name / subtitle
+   --------------------------------------------------------- */
+.loading-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--load-text-0);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.loading-title .accent-text {
+  color: var(--load-accent);
+}
+
+.loading-subtitle {
+  margin: 4px 0 28px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--load-text-1);
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---------------------------------------------------------
+   Pixel Loading Bar — 1 block represents 1 file that has actually finished loading
+   --------------------------------------------------------- */
+.pixel-bar {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.pixel-block {
+  flex: 1 1 0;
+  max-width: 16px;
+  aspect-ratio: 1 / 1;
+  border-radius: 2px;
+  background: var(--load-block-idle);
+  transition: background-color 260ms ease, box-shadow 260ms ease;
+}
+
+.pixel-block.filled {
+  background: linear-gradient(160deg, var(--load-accent-soft), var(--load-accent));
+}
+
+.pixel-block.active {
+  box-shadow: 0 0 8px 1px var(--load-accent-glow);
+}
+
+/* ---------------------------------------------------------
+   Status text (the category currently loading)
+   --------------------------------------------------------- */
+.loading-status {
+  height: 16px;
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--load-text-1);
+  letter-spacing: 0.01em;
+  opacity: 1;
+  transition: opacity 220ms ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.loading-status.status-fade {
+  opacity: 0;
+}
+
+/* ---------------------------------------------------------
+   The actual filename currently loading (small text under the main status)
+   --------------------------------------------------------- */
+.loading-file {
+  height: 14px;
+  margin: 6px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  color: var(--load-text-2);
+  letter-spacing: 0.01em;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.loading-file.status-fade {
+  opacity: 0;
+}
+
+/* ---------------------------------------------------------
+   Responsive — wider screens (tablet / desktop)
+   --------------------------------------------------------- */
+@media (min-width: 480px) {
+  .loading-content { max-width: 360px; }
+  .loading-logo-wrap { width: 96px; height: 96px; }
+  .loading-title { font-size: 27px; }
+}
+
+/* ---------------------------------------------------------
+   Reduced motion — disables non-essential animation per system preference
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .loading-logo-wrap { animation: none; }
+  .pixel-block,
+  .loading-status,
+  .loading-file,
+  .loading-screen {
+    transition: none;
+  }
+}
